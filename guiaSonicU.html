@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía: Sonic Unleashed Recompiled | AntonTech DevStore</title>
+    <style>
+        /* ============================================================
+           VARIABLES Y ESTILOS BASE (ESTILO ANTONTECH)
+           ============================================================ */
+        :root {
+            --bg-page: #101217;
+            --bg-card: rgba(30, 36, 48, 0.6);
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --accent-green: #38bdf8;
+            --accent-blue: #0ea5e9;
+            --color-warning-orange: #fb923c;
+            --color-danger-red: #f87171;
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-blur: blur(12px);
+            --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-main);
+        }
+
+        body {
+            background-color: var(--bg-page);
+            background-image: radial-gradient(at top left, #1a202e 0%, var(--bg-page) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* ============================================================
+           NAVBAR (Mismo estilo que tu hub)
+           ============================================================ */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 3rem;
+            background-color: rgba(16, 18, 23, 0.85);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-bottom: 1px solid var(--glass-border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-text {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--text-primary); 
+        }
+
+        .btn-back {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-back:hover {
+            color: var(--accent-green);
+        }
+
+        /* ============================================================
+           CONTENIDO DE LA GUÍA
+           ============================================================ */
+        .container {
+            padding: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .guide-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            line-height: 1.2;
+        }
+
+        .page-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .guide-section {
+            background-color: var(--bg-card);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .guide-section h2 {
+            font-size: 1.8rem;
+            color: var(--accent-green);
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 0.8rem;
+        }
+
+        .guide-section h3 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-top: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .guide-section p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .guide-section ul, .guide-section ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.8rem;
+            color: var(--text-secondary);
+        }
+
+        .guide-section li {
+            margin-bottom: 0.6rem;
+        }
+
+        .guide-section a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .guide-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Alertas y Etiquetas */
+        .alert {
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .alert-critical {
+            background-color: rgba(248, 113, 113, 0.1);
+            border-left: 4px solid var(--color-danger-red);
+            color: #fca5a5;
+        }
+
+        .alert-warning {
+            background-color: rgba(251, 146, 60, 0.1);
+            border-left: 4px solid var(--color-warning-orange);
+            color: #fdba74;
+        }
+
+        code {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-family: 'Courier New', Courier, monospace;
+            color: var(--accent-green);
+            border: 1px solid var(--glass-border);
+            font-size: 0.9em;
+        }
+        /* ============================================================
+           BOTÓN DE VIDEO YOUTUBE (Llamado a la acción)
+           ============================================================ */
+        .video-cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .video-cta h3 {
+            color: var(--text-primary);
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-red {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #ff0000;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+        }
+
+        .btn-red:hover {
+            background-color: #cc0000;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+        }
+        /* Contenedor para alinear los botones lado a lado */
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap; /* Permite que se apilen en pantallas de celular */
+            margin-top: 1rem;
+        }
+
+        /* ============================================================
+           BOTÓN DE COMUNIDAD TELEGRAM
+           ============================================================ */
+        .btn-telegram {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #0088cc; /* Azul característico de Telegram */
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 136, 204, 0.2);
+        }
+
+        .btn-telegram:hover {
+            background-color: #0077b3;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 136, 204, 0.4);
+        }
+        /* Ajuste para los iconos SVG dentro de los botones */
+        .btn-red svg, .btn-telegram svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor; /* Esto hace que el icono tome el color blanco del texto */
+            transition: transform 0.3s ease;
+        }
+
+        /* Pequeño efecto: el icono salta un poco al pasar el mouse */
+        .btn-red:hover svg, .btn-telegram:hover svg {
+            transform: scale(1.1) rotate(-5deg);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/logotipo.png" alt="Logo AntonTech" style="width: 40px; height: 40px; object-fit: cover; border-radius: 50%;" onerror="this.style.display='none'">
+            <span class="logo-text">AntonTech | DevStore Xbox</span>
+        </div>
+        <a href="index.html" class="btn-back">← Volver al Hub</a>
+    </header>
+
+    <main class="container">
+        <div class="guide-header">
+            <h1 class="page-title">Guía de Configuración UWP:<br>Sonic Unleashed Recompiled</h1>
+            <p class="page-subtitle">Instrucciones paso a paso para instalar el port (creado por WorleyDL) en Xbox Series S/X mediante Developer Mode.</p>
+        </div>
+
+        <div class="alert alert-critical">
+            <strong>REQUISITO CRÍTICO: LETRA DE UNIDAD E:\</strong><br>
+            Este port UWP requiere absolutamente que tu unidad USB externa tenga asignada la letra <code>E:</code> cuando la conectes a tu PC con Windows durante el proceso de configuración. Si Windows le asigna otra letra (como D:, F:, etc.), la aplicación en Xbox no encontrará los datos del juego ni los mods.
+        </div>
+
+        <section class="guide-section">
+            <h2>Requisitos Previos</h2>
+            <p>Antes de comenzar, asegúrate de cumplir con lo siguiente:</p>
+            <ul>
+                <li><strong>Modo Desarrollador Activo:</strong> Tu Xbox Series S/X debe estar en Dev Mode. <em>(No funciona en Xbox One)</em>.</li>
+                <li><strong>Acceso Remoto:</strong> Habilitado y configurado en la app Xbox Dev Home.</li>
+                <li><strong>Unidad USB Externa:</strong> Formateada en NTFS con permisos completos de lectura/escritura para aplicaciones UWP. Debe aparecer como unidad <code>E:</code> en Windows.</li>
+                <li><strong>Archivos de Sonic Unleashed:</strong> Tu propia copia del juego de Xbox 360 (formato ISO o carpeta extraída), el "Title Update" más reciente y los DLCs (opcional).</li>
+                <li><strong>Instalador para PC:</strong> Necesario para generar los datos del juego.</li>
+                <li><strong>Aplicación UWP:</strong> El archivo <code>.msixbundle</code> y su dependencia <code>.appx</code>.</li>
+            </ul>
+        </section>
+
+        <section class="guide-section">
+            <h2>Parte 1: Preparando Archivos en la Unidad E:\</h2>
+            <p><em>Este paso debe hacerse en tu PC con la memoria USB conectada.</em></p>
+
+            <h3>1.1 Verificar la Letra de la Unidad</h3>
+            <ol>
+                <li>Conecta tu unidad USB (NTFS y con permisos) a tu PC con Windows.</li>
+                <li>Abre el Explorador de Archivos (Este equipo) y revisa qué letra tiene asignada.</li>
+                <li><strong>Si no es E:</strong>, debes cambiarla:
+                    <ul>
+                        <li>Presiona <code>Win + R</code>, escribe <code>diskmgmt.msc</code> y presiona Enter.</li>
+                        <li>Busca tu USB, haz clic derecho sobre su partición y elige <strong>"Cambiar la letra y rutas de acceso de unidad..."</strong>.</li>
+                        <li>Haz clic en "Cambiar", selecciona la letra <strong>E</strong> en el menú desplegable y acepta.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>1.2 Preparar Instalador y Archivos Base</h3>
+            <ol>
+                <li>Descarga el instalador para PC (<code>UnleashedRecompiled-Windows.zip</code>) desde el <a href="https://github.com/hedge-dev/UnleashedRecompiled/releases" target="_blank">GitHub Oficial</a>.</li>
+                <li>Extrae el .zip en una carpeta temporal.</li>
+                <li>En tu memoria USB (ahora <code>E:\</code>), crea una carpeta llamada exactamente <code>unleashed</code>.</li>
+                <li>Copia todo el contenido extraído del instalador dentro de <code>E:\unleashed</code>.</li>
+                <li>Crea otra carpeta temporal adentro llamada <code>my sonic files</code> (Ruta: <code>E:\unleashed\my sonic files</code>). Mete ahí tu ISO del juego, el Title Update y los DLCs.</li>
+            </ol>
+
+            <h3>1.3 Ejecutar el Instalador</h3>
+            <ol>
+                <li>Abre <code>UnleashedRecompiled.exe</code> desde tu memoria USB.</li>
+                <li>Selecciona el idioma y dale "Next".</li>
+                <li><strong>Game:</strong> Haz clic en "Add Files", busca tu ISO o archivo .xex en <code>my sonic files</code> y ábrelo.</li>
+                <li><strong>Update:</strong> En la pestaña "Update", dale a "Add Files", selecciona tu Title Update.</li>
+                <li><strong>DLC (Opcional):</strong> Selecciona los DLCs o dale a "Skip".</li>
+                <li>Haz clic en "Next". El instalador creará las carpetas definitivas (game, update, etc.) en <code>E:\unleashed</code>. Al terminar, puedes borrar la carpeta temporal "my sonic files".</li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>Parte 2: Instalando la Aplicación UWP</h2>
+            <p>Instala la aplicación en el almacenamiento interno de tu Xbox.</p>
+            <ol>
+                <li>Descarga el último <code>.msixbundle</code> y la dependencia <code>.appx</code> desde GitHub.</li>
+                <li>Conéctate al <strong>Xbox Device Portal</strong> desde el navegador de tu PC.</li>
+                <li>Ve a <strong>"My games & apps" > "Add"</strong>.</li>
+                <li>Sube el archivo <code>.msixbundle</code>.</li>
+                <li>Haz clic en "Next" y sube el archivo de dependencia <code>.appx</code>. Dale a "Start".</li>
+                <li>Una vez instalado, búscalo en tu Xbox, presiona el botón "View" (Select) > "View details" y asegúrate de que el <strong>"App type"</strong> esté configurado como <strong>"Game"</strong>. Reinicia la consola.</li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>Parte 3: Iniciando el Juego</h2>
+            <ol>
+                <li><strong>Asegúrate</strong> de que la memoria USB (la misma que configuraste como E: en tu PC) esté conectada al Xbox.</li>
+                <li>Ve al dashboard de Dev Mode, busca "Sonic Unleashed Recompiled" en la sección de juegos e inícialo.</li>
+                <li>El juego buscará automáticamente la carpeta <code>unleashed</code> en tu unidad USB.</li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>Parte 4: Configuración de Mods (HedgeModManager)</h2>
+            <div class="alert alert-warning">
+                Asegúrate de realizar esto en tu PC con el USB conectado y reconocido como unidad E:\
+            </div>
+            <ol>
+                <li>Descarga la última versión de <a href="#" target="_blank">HedgeModManager</a>.</li>
+                <li>En tu USB, crea una carpeta llamada <code>mods</code> (Ruta exacta: <code>E:\unleashed\mods</code>). Pega ahí las carpetas de tus mods.</li>
+                <li>Abre HedgeModManager en tu PC.</li>
+                <li>Ve a la pestaña <strong>"Settings"</strong>. Es crucial configurar las rutas así:
+                    <ul>
+                        <li>Install Directory: <code>E:\unleashed</code></li>
+                        <li>Mods Directory: <code>E:\unleashed\mods</code></li>
+                    </ul>
+                </li>
+                <li>Ve a la pestaña "Mods", actívalos y haz clic en <strong>"Save"</strong>. Esto generará un archivo llamado <code>ModsDB.ini</code>.</li>
+                <li>Desconecta el USB de la PC, conéctalo al Xbox y ¡a jugar!</li>
+            </ol>
+        </section>
+
+        <section class="guide-section">
+            <h2>Solución de Problemas (FAQ)</h2>
+            <h3>El juego no inicia, se cierra (Crashea) o los Mods no cargan</h3>
+            <ul>
+                <li><strong>¿Letra E:?</strong> Confirma que tu USB era absolutamente la unidad E: en tu PC durante la Parte 1. Es la causa #1 de errores.</li>
+                <li><strong>¿USB Conectado?</strong> Parece obvio, pero verifica que la memoria esté conectada al Xbox antes de abrir el juego.</li>
+                <li><strong>Rutas de HMM:</strong> Verifica que en los ajustes de HedgeModManager las rutas apunten correctamente a <code>E:\unleashed</code>.</li>
+                <li><strong>Generación Incompleta:</strong> Asegúrate de que el instalador de PC terminó de crear las carpetas "game" y "update" sin interrupciones.</li>
+                <li><strong>Permisos NTFS:</strong> Verifica que el USB tenga el permiso "ALL APPLICATION PACKAGES" con control total.</li>
+            </ul>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem;"><em><strong>Aviso:</strong> Este proyecto es de fans y no es un producto de SEGA. El port UWP es de WorleyDL. Reporta bugs específicos del port en su repositorio.</em></p>
+        </section>
+
+        <section class="guide-section">
+            <h2>Ver video tutorial paso a paso en el canal de AntonTech</h2>
+            <div class="video-cta">
+            <h3>¿Dudas con el proceso o prefieres verlo en video?</h3>
+            <div class="cta-buttons">
+                
+                <a href="https://www.youtube.com/@AntonTech1906" target="_blank" class="btn-red">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                    </svg>
+                    Ver tutorial en video
+                </a>
+                
+                <a href="https://t.me/antonTech19061" target="_blank" class="btn-telegram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.223-.548.223l.188-2.623 4.823-4.35c.212-.19-.048-.296-.33-.11l-5.97 3.76-2.553-.8c-.554-.173-.564-.553.116-.82l9.957-3.83c.46-.174.865.105.817.58z"/>
+                    </svg>
+                    Únete a la comunidad
+                </a>
+                
+            </div>
+        </div>
+
+        
+            <p style="margin-top: 1.5rem; font-size: 0.9rem;"><em><strong>Aviso:</strong> Este proyecto es de fans y no es un producto de SEGA. El port UWP es de WorleyDL. Reporta bugs específicos del port en su repositorio.</em></p>
+        </section>
+    </main>
+
+</body>
+</html>

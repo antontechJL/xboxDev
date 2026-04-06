@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             bgClass: "bg-blue",
             btnText: "Download",
             downloadUrl: "https://drive.google.com/uc?export=download&id=12oaHXpih-w_eajD0z9BR2VDoSrVit_5i", 
-            officialUrl: "https://pagina-oficial.com"
+            officialUrl: "https://github.com/YTReviveMe/Xbox-UWP-Permission-Tool"
         },
         {
             title: "SAFE EXIT",
@@ -24,19 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
             bgClass: "bg-blue",
             btnText: "Download",
             downloadUrl: "https://drive.google.com/uc?export=download&id=1_7uDjTEgEUy9hEyXzxBIPRF9lVboNAFp", 
-            officialUrl: "https://pagina-oficial.com"
+            officialUrl: "https://github.com/Dantes-Dungeon/safe-exit"
         },
-        /*{
-            title: "SFTP",
-            desc: "SFTP puede transferir archivos a tu Xbox a través de una red local, tanto al almacenamiento interno como al USB.",
-            warningText: "",
-            warningClass: "",
-            img: "img/sftp.png",
-            bgClass: "bg-dark-blue",
-            btnText: "Download",
-            downloadUrl: "https://t.me/tuGrupoDeTelegram", 
-            officialUrl: "https://pagina-oficial.com"
-        },*/
         {
             title: "LAUNCHPASS",
             desc: "¡La actualización de LaunchPass llegará PRONTO!",
@@ -45,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
             img: "img/lauchpass.png",
             bgClass: "bg-purple",
             btnText: "Download",
-            downloadUrl: "https://t.me/tuGrupoDeTelegram", 
-            officialUrl: "https://pagina-oficial.com"
+            downloadUrl: "https://drive.google.com/uc?export=download&id=1t9r-kVkAG1VJlLyiYQprN-fDnVmp3l19", 
+            officialUrl: "https://github.com/Misunderstood-Wookiee/LaunchPass"
         },
         {
             title: "MOONLIGHT",
@@ -56,8 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
             img: "img/moonlight.png",
             bgClass: "bg-yellow",
             btnText: "Download",
-            downloadUrl: "https://t.me/tuGrupoDeTelegram", 
-            officialUrl: "https://pagina-oficial.com"
+            downloadUrl: "https://drive.google.com/uc?export=download&id=1VkGlOSQXuvuMlfebNN3VyyJIu65D4cf5", 
+            officialUrl: "https://github.com/TheElixZammuto/moonlight-xbox"
         },
         {
             title: "RETROPASS",
@@ -67,8 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
             img: "img/retroPass.png",
             bgClass: "bg-green",
             btnText: "Download",
-            downloadUrl: "https://t.me/tuGrupoDeTelegram", 
-            officialUrl: "https://pagina-oficial.com"
+            downloadUrl: "https://drive.google.com/uc?export=download&id=15Ln_buw-xgvHWKQnBwTPREsnqFgNhu2r", 
+            officialUrl: "https://github.com/retropassdev/RetroPass"
         },
         {
             title: "Discord",
@@ -78,8 +67,8 @@ document.addEventListener("DOMContentLoaded", () => {
             img: "img/discord.png",
             bgClass: "bg-blue",
             btnText: "Download",
-            downloadUrl: "https://t.me/tuGrupoDeTelegram", 
-            officialUrl: "https://pagina-oficial.com"
+            downloadUrl: "https://drive.google.com/uc?export=download&id=1KvmEg5QbAwGTayWJQu5EPIfFeyh5V1M7", 
+            officialUrl: "https://discord.com/"
         },
         {
             title: "X",
@@ -89,8 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
             img: "img/X.png",
             bgClass: "bg-dark",
             btnText: "Download",
-            downloadUrl: "https://t.me/tuGrupoDeTelegram", 
-            officialUrl: "https://pagina-oficial.com"
+            downloadUrl: "https://drive.google.com/uc?export=download&id=1fCwXD_LHqpvDW59PlEaxLXIquYq_KILE", 
+            officialUrl: "https://x.com/"
         },
         {
             title: "XB Cloud Gaming",
@@ -100,8 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
             img: "img/XBCloudGaming.png",
             bgClass: "bg-green",
             btnText: "Download",
-            downloadUrl: "https://t.me/tuGrupoDeTelegram", 
-            officialUrl: "https://pagina-oficial.com"
+            downloadUrl: "https://drive.google.com/uc?export=download&id=1c7nh_xIT2JGbWwilKzCAyetf3ESGTg4n", 
+            officialUrl: "https://www.xbox.com/es-mx/play"
         },
         {
             title: "Oberon",
@@ -111,8 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
             img: "img/Oberon.png",
             bgClass: "bg-dark-blue",
             btnText: "Download",
-            downloadUrl: "https://t.me/tuGrupoDeTelegram", 
-            officialUrl: "https://pagina-oficial.com"
+            downloadUrl: "https://drive.google.com/uc?export=download&id=1QSrgPz5ZgIUGvRdSt74uY3lBLuDcebd9", 
+            officialUrl: "https://github.com/SamsidParty/OberonRemote"
         }
     ];
 
@@ -127,52 +116,54 @@ document.addEventListener("DOMContentLoaded", () => {
             warningClass: "text-orange", 
             img: "img/sonicUnleashed.png", 
             bgClass: "bg-green", 
-            btnText: "Ver Guía", 
-            downloadUrl: "#", 
-            officialUrl: "#" }
+            btnText: "Download", 
+            downloadUrl: "https://drive.google.com/uc?export=download&id=1HXUL5nInMELnPjliA9oDvAFcM7JMMwtT", 
+            officialUrl: "https://github.com/YTReviveMe/UnleashedRecomp-uwp",
+            tutorialUrl: "guiaSonicU.html" 
+        }
     ];
 
     // --- DATOS: EMULADORES ---
     const emulatorData = [
-        { title: "RetroArch Xbox One", 
+        { title: "RetroArch Xbox One All", 
             desc: "El todo en uno para consolas clásicas.", 
             warningText: "*ALTAMENTE RECOMENDADO*", 
             warningClass: "text-orange", 
             img: "img/Retroarch.png", 
             bgClass: "bg-dark-blue", 
             btnText: "Download", 
-            downloadUrl: "#", 
-            officialUrl: "#" 
+            downloadUrl: "https://drive.google.com/uc?export=download&id=1Btl4ofkwk3SKRA53r7EcR6hDHeu2hopp", 
+            officialUrl: "https://retroarch.com/" 
         },
-        { title: "RetroArch Xbox Series S/X", 
+        { title: "RetroArch Xbox Series S/X All", 
             desc: "El todo en uno para consolas clásicas.", 
             warningText: "*ALTAMENTE RECOMENDADO*", 
             warningClass: "text-orange", 
             img: "img/Retroarch.png", 
             bgClass: "bg-dark-blue", 
             btnText: "Download", 
-            downloadUrl: "#", 
-            officialUrl: "#" 
+            downloadUrl: "https://drive.google.com/uc?export=download&id=1jN5iEeJN8Gw1RqSl-WH03Acyirw1g-an", 
+            officialUrl: "https://retroarch.com/" 
         },
         { title: "RetroArch Xbox One LITE", 
-            desc: "El todo en uno para consolas clásicas.", 
+            desc: "El todo en uno para consolas clásicas. Esta version NO viene con núcleos.", 
             warningText: "*ALTAMENTE RECOMENDADO*", 
             warningClass: "text-orange", 
             img: "img/RetroarchLITE.png", 
             bgClass: "bg-dark-blue", 
             btnText: "Download", 
-            downloadUrl: "#", 
-            officialUrl: "#" 
+            downloadUrl: "https://drive.google.com/uc?export=download&id=15YkZuAgWuKJ9BZuGvHoauaf1sii9TjNJ", 
+            officialUrl: "https://retroarch.com/" 
         },
         { title: "RetroArch Xbox Series S/X LITE", 
-            desc: "El todo en uno para consolas clásicas.", 
+            desc: "El todo en uno para consolas clásicas. Esta version NO viene con núcleos.", 
             warningText: "*ALTAMENTE RECOMENDADO*", 
             warningClass: "text-orange", 
             img: "img/RetroarchLITE.png", 
             bgClass: "bg-dark-blue", 
             btnText: "Download", 
-            downloadUrl: "#", 
-            officialUrl: "#" 
+            downloadUrl: "https://drive.google.com/uc?export=download&id=1mKPyFzFjcqJxbmOy7oNIdPwueJ0PdoJr", 
+            officialUrl: "https://retroarch.com/" 
         },
         { 
             title: "Xenia Canary", 
@@ -182,10 +173,10 @@ document.addEventListener("DOMContentLoaded", () => {
             img: "img/xeniacanary.png", 
             bgClass: "bg-blue", 
             btnText: "Download", 
-            downloadUrl: "#", 
-            officialUrl: "#" 
-        },
-        { 
+            downloadUrl: "https://drive.google.com/uc?export=download&id=1wEOanu7uap704jSoHmkmzUiy9PyhFM7C", 
+            officialUrl: "https://xenia.jp/" 
+        }
+       /* { 
             title: "PPSSPP", 
             desc: "Emulador de PSP con escalado a 4K.", 
             warningText: "", warningClass: "", 
@@ -194,13 +185,17 @@ document.addEventListener("DOMContentLoaded", () => {
             btnText: "Download", 
             downloadUrl: "#", 
             officialUrl: "#" 
-        }
+        }*/
     ];
-
+//REVISAR Y CAMBIAR URLS CON MI NUBE
     // --- DATOS: MEDIA APPS ---
     const mediaData = [
-        { title: "Kodi", desc: "Centro multimedia definitivo para streaming.", warningText: "", warningClass: "", img: "img/kodi.png", bgClass: "bg-dark-blue", btnText: "Download", downloadUrl: "#", officialUrl: "#" },
-        { title: "VLC Player", desc: "Reproductor universal de archivos locales.", warningText: "", warningClass: "", img: "img/vlc.png", bgClass: "bg-orange", btnText: "Download", downloadUrl: "#", officialUrl: "#" }
+        { title: "Kodi", desc: "Centro multimedia definitivo para streaming.", warningText: "", warningClass: "", img: "img/kodi.png", bgClass: "bg-dark-blue", btnText: "Download", 
+            downloadUrl: "https://xbdev.store/download/8/", 
+            officialUrl: "https://kodi.tv/" },
+        { title: "VLC Player", desc: "Reproductor universal de archivos locales.", warningText: "", warningClass: "", img: "img/vlc.png", bgClass: "bg-orange", btnText: "Download", 
+            downloadUrl: "https://xbdev.store/download/98/", 
+            officialUrl: "https://www.videolan.org/vlc/" }
     ];
 
     // --- DATOS: TOOLS ---
@@ -213,8 +208,8 @@ document.addEventListener("DOMContentLoaded", () => {
             img: "img/godot.png", 
             bgClass: "bg-dark-blue",
             btnText: "Download", 
-            downloadUrl: "#", 
-            officialUrl: "#" 
+            downloadUrl: "https://downloads.godotengine.org/?version=3.5&flavor=stable&slug=win64.exe.zip&platform=windows.64", 
+            officialUrl: "https://godotengine.org/download/archive/3.5-stable/" 
         },
     ]
     // --- FUNCIÓN DE RENDERIZADO ---
@@ -235,6 +230,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p class="card-desc ${item.warningClass !== 'text-orange' ? item.warningClass : ''}">${item.warningText}&nbsp;</p>
                     <div class="card-buttons">
                         <button class="btn btn-green" onclick="window.open('${item.downloadUrl}', '_blank')">${item.btnText}</button>
+                        ${item.tutorialUrl ? `
+                            <button class="btn btn-red" onclick="window.open('${item.tutorialUrl}', '_blank')">
+                                Tutorial
+                            </button>
+                        ` : ''}
                         <button class="btn btn-black" onclick="window.open('${item.officialUrl}', '_blank')">Official</button>
                     </div>
                 </div>
