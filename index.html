@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntonTech | Devstore Xbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+    <img src="img/logotipo.png" alt="Logo AntonTech" class="w-10 h-10 object-cover rounded-full">
+    <span class="logo-text">AntonTech | DevStore Xbox</span>
+</div>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar tools, apps, juegos...">
+        </div>
+
+        <nav class="nav-links">
+            <a href="#seccion-apps">APPS</a>
+            <a href="#seccion-juegos">JUEGOS</a>
+            <a href="#seccion-emuladores">EMULADORES</a>
+            <a href="#seccion-media">MEDIA APPS</a>
+            <a href="#seccion-tools">TOOLS</a>
+        </nav>
+    </header>
+
+   <main class="container">
+    
+    <section id="seccion-apps" class="section-block">
+        <h1 class="section-title"><span class="highlight">|</span> APPS</h1>
+        <div class="cards-grid" id="apps-container"></div>
+        <div id="no-results-apps" class="no-results-msg" style="display: none;">No hay aplicaciones que coincidan.</div>
+    </section>
+
+    <section id="seccion-juegos" class="section-block">
+        <h1 class="section-title"><span class="highlight">|</span> JUEGOS & PORTS</h1>
+        <div class="cards-grid" id="games-container"></div>
+        <div id="no-results-games" class="no-results-msg" style="display: none;">No hay juegos que coincidan.</div>
+    </section>
+
+    <section id="seccion-emuladores" class="section-block">
+        <h1 class="section-title"><span class="highlight">|</span> EMULADORES</h1>
+        <div class="cards-grid" id="emulators-container"></div>
+        <div id="no-results-emulators" class="no-results-msg" style="display: none;">No hay emuladores que coincidan.</div>
+    </section>
+
+    <section id="seccion-media" class="section-block">
+        <h1 class="section-title"><span class="highlight">|</span> MEDIA APPS</h1>
+        <div class="cards-grid" id="media-container"></div>
+        <div id="no-results-media" class="no-results-msg" style="display: none;">No hay apps de media que coincidan.</div>
+    </section>
+
+    <section id="seccion-tools" class="section-block">
+        <h1 class="section-title"><span class="highlight">|</span> TOOLS</h1>
+        <div class="cards-grid" id="tools-container"></div>
+        <div id="no-results-tools" class="no-results-msg" style="display: none;">No hay herramientas que coincidan.</div>
+    </section>
+
+</main>
+    <script src="script.js"></script>
+
+    <div id="promo-banner" class="promo-banner" style="display: none;">
+        <button class="close-banner" onclick="cerrarBanner()">×</button>
+        <div class="promo-content">
+            <img src="img/productos/AdataSSD.webp" alt="Promo Mercado Libre" class="promo-img">
+            <div class="promo-text">
+                <h4>Expande tu Consola</h4>
+                <p>Disco duro ideal para Dev Mode y RetroArch.</p>
+                <a href="https://meli.la/2XUevDj" target="_blank" class="btn-promo">Ver en Mercado Libre</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
