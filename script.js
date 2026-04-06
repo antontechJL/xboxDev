@@ -304,31 +304,21 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==========================================
 
 // 1. Mostrar el banner si el usuario no lo ha cerrado antes
+// Función para que el anuncio salga SIEMPRE al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
     const banner = document.getElementById('promo-banner');
     
-    // Si NO existe el registro en la memoria del navegador, mostramos el banner
-    if (!localStorage.getItem('bannerMLCerrado')) {
-        // Le damos un pequeño retraso (ej. 2 segundos) para que no salga de golpe al cargar la página
-        setTimeout(() => {
-            banner.style.display = 'flex';
-        }, 2000); 
-    }
+    // Esperamos 2 segundos para que no sea tan invasivo al entrar
+    setTimeout(() => {
+        banner.style.display = 'flex'; // Usamos flex para que el diseño se mantenga alineado
+    }, 2000);
 });
 
-// 2. Función para cerrar el banner y guardarlo en la memoria
+// Función para cerrar el banner (SOLO en la sesión actual)
 function cerrarBanner() {
     const banner = document.getElementById('promo-banner');
+    banner.style.display = 'none';
     
-    // Animación de salida (se desvanece y baja un poco)
-    banner.style.opacity = '0';
-    banner.style.transform = 'translateY(20px)';
-    
-    // Esperamos 300ms a que termine la animación visual antes de quitarlo del HTML
-    setTimeout(() => {
-        banner.style.display = 'none';
-    }, 300);
-    
-    // ¡EL TRUCO! Guardamos en el navegador que el usuario ya cerró este banner
-    localStorage.setItem('bannerMLCerrado', 'true');
+    // NOTA: Si tenías una línea de "localStorage.setItem...", bórrala.
+    // Así, al recargar la página (F5), el estado no se guarda y vuelve a salir.
 }
