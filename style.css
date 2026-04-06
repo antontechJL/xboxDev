@@ -447,3 +447,65 @@ body {
 .btn-promo:hover {
     transform: scale(1.05);
 }
+/* ============================================================
+   DISEÑO RESPONSIVO (MÓVILES Y TABLETS)
+   ============================================================ */
+@media (max-width: 768px) {
+    /* 1. Ajuste del Navbar para que no se desborde */
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* 2. Márgenes más pequeños para aprovechar la pantalla */
+    .container {
+        padding: 1.5rem;
+    }
+
+    /* 3. Textos de la guía más amigables para lectura en celular */
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .guide-section {
+        padding: 1.5rem;
+    }
+
+    /* 4. Banner de Mercado Libre (centrado y ancho completo) */
+    .promo-banner {
+        width: calc(100% - 40px); /* 100% menos los márgenes */
+        bottom: 10px;
+        right: 20px;
+        left: 20px;
+        box-sizing: border-box;
+    }
+
+    /* 5. Tarjetas: Asumiendo que usas CSS Grid o Flex para tus cards */
+    .cards-grid, .grid-container {
+        grid-template-columns: 1fr; /* Una sola columna en celular */
+        gap: 1.5rem;
+    }
+
+    /* 6. Botones apilados para que sean fáciles de tocar con el dedo */
+    .card-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    /* 7. Botones de YouTube y Telegram al final de la guía */
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-red, .btn-telegram {
+        width: 100%;
+        justify-content: center;
+    }
+}

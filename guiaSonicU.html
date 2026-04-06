@@ -273,6 +273,71 @@
         .btn-red:hover svg, .btn-telegram:hover svg {
             transform: scale(1.1) rotate(-5deg);
         }
+        /* ============================================================
+           DISEÑO RESPONSIVO (MÓVILES Y TABLETS) - GUÍA
+           ============================================================ */
+        @media (max-width: 768px) {
+            /* 1. Ajuste del Navbar (Menú superior) */
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+                gap: 12px;
+                text-align: center;
+            }
+
+            /* 2. Reducir los márgenes laterales para ganar espacio de lectura */
+            .container {
+                padding: 1.5rem 1rem;
+            }
+
+            /* 3. Escalar los títulos para que no ocupen media pantalla */
+            .page-title {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .page-subtitle {
+                font-size: 1rem;
+            }
+
+            /* 4. Ajustar el padding interno de cada sección de la guía */
+            .guide-section {
+                padding: 1.5rem;
+                border-radius: 12px;
+            }
+
+            .guide-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .guide-section h3 {
+                font-size: 1.2rem;
+            }
+
+            /* 5. Pegar un poco más las viñetas a la izquierda */
+            .guide-section ul, .guide-section ol {
+                padding-left: 1.2rem;
+            }
+
+            /* 6. Ajustar las cajas de alerta (rojas y naranjas) */
+            .alert {
+                padding: 1rem;
+                font-size: 0.95rem;
+            }
+
+            /* 7. Apilar los botones de YouTube y Telegram al 100% de ancho */
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-red, .btn-telegram {
+                width: 100%;
+                justify-content: center;
+                font-size: 1rem;
+                padding: 12px;
+            }
+        }
     </style>
 </head>
 <body>
